@@ -27,6 +27,10 @@
     }
 }
 /* End Global Rules */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 .form {
     width: 400px;
@@ -74,11 +78,22 @@
     margin-bottom: 10px;
 }
 
-
 .delete {
     border: none;
     color: white;
     background-color: red;
     padding: 1px 3px;
     border-radius: 4px;
+}
+
+@media (max-width: 991px) {
+    .form {
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .tasks {
+        width: 300px;
+        max-width: 100%;
+    }
 }
