@@ -3,6 +3,7 @@ let inp = document.querySelector(".input");
 let add = document.querySelector(".add");
 let tasks = document.querySelector(".tasks");
 
+// Apply the data from local storage to the page once it reloads or reopens
 let arr = [];
 if (JSON.parse(localStorage.getItem("tasks"))){
     arr = JSON.parse(localStorage.getItem("tasks"));
@@ -13,18 +14,18 @@ if (JSON.parse(localStorage.getItem("tasks"))){
 
 add.addEventListener("click", function () {
     if (inp.value !== "") {
-        createTask(inp.value);
+        createTask(inp.value); //add a task to the page
         let data = {
             id: Math.random(),
             title: inp.value
         };
         arr.push(data);
-        localStorage.setItem("tasks",JSON.stringify(arr)); 
-        inp.value = "";  
+        localStorage.setItem("tasks",JSON.stringify(arr)); //add a task to local storage 
+        inp.value = ""; //to empty the input once a task added
     }
 });
 
-        
+// make an element as a new task        
 function createTask(text) {
     let task = document.createElement("div");
     let title = document.createTextNode(`${text}`);
