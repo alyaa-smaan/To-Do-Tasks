@@ -17,7 +17,7 @@ A simple and interactive To-Do List application built with HTML, CSS, and JavaSc
 
 - **HTML5**
 - **CSS3**
-- **JavaScript
+- **JavaScript**
 - **localStorage Web API**
 
 
